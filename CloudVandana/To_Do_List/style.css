@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #490b8b, #1d458a);
+}
+
+.box {
+    width: 400px;
+    min-height: 500px;
+    background-color: rgb(219, 215, 215);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#item {
+    padding: 12px;
+    font-size: 18px;
+    width: 75%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#add-btn {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    background-color: #1e51aa;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-btn:hover {
+    background-color: #0f386b;
+}
+
+#to-do-box {
+    margin-top: 20px;
+    list-style: none;
+}
+
+#to-do-box li {
+    position: relative;
+    background-color: #10355a;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    padding-right: 30px;
+    text-align: justify;
+    margin-top: 10px;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#to-do-box li:hover {
+    transform: scale(1.03);
+}
+
+#to-do-box li i {
+    cursor: pointer;
+    color: #e74c3c;
+    font-size: 18px;
+}
+
+#to-do-box li i:hover {
+    color: #c0392b;
+}
+
+.done {
+    text-decoration: line-through;
+    color: black;
+    background-color: #95a5a6 !important;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+
+    <div class="slider-container">
+        <img id="slider">
+        <br>
+        <div class="buttons">
+            <button onclick="prevImage()">⬅️ Previous</button>
+            <button onclick="nextImage()">Next ➡️</button>
+        </div>
+    </div>
+
+    <script>
+        let images = [
+            "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+            "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+            "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084",
+            "https://images.unsplash.com/photo-1499084732479-de2c02d45fcc",
+            "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+            "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
+        ];
+
+        let index = 0;
+        let slider = document.getElementById("slider");
+
+        // Show first image
+        slider.src = images[index]; 
+
+        // Reset to first image
+        function nextImage() {
+            index++; 
+            if (index > 5) index = 0; 
+            slider.src = images[index];
+        }
+
+        // Reset to last image
+        function prevImage() {
+            index--; 
+            if (index < 0) index = 5; 
+            slider.src = images[index];
+        }
+    </script>
+
+</body>
+</html>
